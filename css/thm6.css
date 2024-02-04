@@ -1,0 +1,105 @@
+html
+{
+  background-color: #333;
+  color: white;
+}
+
+a
+{
+  color: #E91E63;
+}
+
+#c-important
+{
+  background-image: linear-gradient(#F22, #F00);
+  color: white;
+  text-shadow: 0px 0px 20px white;
+}
+
+.turnable
+{
+  transition: 0.8s;
+}
+
+.c:active
+{
+  filter: opacity(0.8);
+}
+
+.c-text-box
+{
+  background-color: #0008;
+}
+
+.c
+{
+  background-color: white;
+  box-shadow: 0px 0px 8px black;
+  border-radius: 3px;
+  border-color;
+  color: white;
+}
+
+#header
+{
+  background-color: #0000 !important;
+  background-image: linear-gradient(to top, #0007 0%, #3337 20%, #ccc7 90%, #fff7 100%);
+  box-shadow: 0px 0px 8px black;
+}
+
+.header-title
+{
+  color: white;
+  text-shadow: 0px 0px 4px lightgrey;
+}
+
+.header-subtitle
+{
+  color: white;
+  text-shadow: 0px 0px 4px lightgrey;
+}
+
+.header-button-back
+{
+/*  background-color: #0FF;*/
+}
+
+.header-button-copyright
+{
+/*  background-color: #0FF;*/
+}
+
+#settings-panel {
+  background-color: #0000 !important;
+  background-image: linear-gradient(to top, #0007 0%, #3337 20%, #ccc7 90%, #fff7 100%);
+}
+
+.settings-item {
+  background-image: linear-gradient(to bottom, #2229 0%, #9999 100%);
+}
+
+button
+{
+  border-radius: 3px;
+  border: solid 2px darkgray;
+  background-color: #0000 !important;
+  background-image: linear-gradient(to top, #2229 0%, #7779 100%);
+  color: white;
+}
+
+button:hover
+{
+  background-color: #0000 !important;
+  background-image: radial-gradient(at bottom center, #fff7 0%, #0000 100%), linear-gradient(to top, #2229 0%, #7779 100%);
+  border-color: white;
+  color: white;
+  box-shadow: 0 0 2px white;
+}
+
+button:active
+{
+  background-color: #0000 !important;
+  background-image: linear-gradient(to bottom, #3339 0%, #6669 100%);
+  border-color: grey;
+  color: #222;
+}
