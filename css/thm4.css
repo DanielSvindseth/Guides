@@ -1,7 +1,10 @@
-html
-{
-  background-color: #333;
+html {
+  background-color: #000000;
   color: white;
+}
+
+body {
+  background-color: #202020;
 }
 
 a
@@ -35,7 +38,7 @@ a
 {
   background-color: white;
   box-shadow: 0px 0px 8px black;
-  border-radius: 3px;
+  border-radius: 6px;
   border-color;
   color: white;
 }
@@ -75,23 +78,25 @@ a
 
 button
 {
-  border-radius: 3px;
-  border: solid 2px darkgray;
-  background-image: linear-gradient(#e51d98, #ce1a89);
-  color: white;
+  border-radius: 6px;
+  border: solid 2px #d6d6d67f;
+  background-color: #d6d6d63f;
+  /* background-image: linear-gradient(#d6d6d63f, #b6b6b63f); */
+  color: #ffffff;
 }
 
 button:hover
 {
-  background-image: linear-gradient(#e51d98, #ce1a89);
-  border-color: white;
-  color: white;
-  box-shadow: 0 0 2px white;
+  /* background-image: linear-gradient(#655165, #8a7c8a); */
+  border-color: #ffffff;
+  background-color: #d6d6d67f;
+  color: #ffffff;
+  box-shadow: 0 0 2px #ffffff;
 }
 
 button:active
 {
-  background-image: linear-gradient(#e51d98, #ce1a89);
-  border-color: grey;
-  color: #222;
+  /* background-image: linear-gradient(#8a7c8a, #655165); */
+  border-color: #c7c7c7;
+  color: #ffffff;
 }

@@ -5,6 +5,11 @@ html {
 
 body {
     /*background-image: linear-gradient(#424242, #212121);*/
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px 3px auto;
+    grid-template-areas: "header" "..." "main";
 }
 
 * {
@@ -74,6 +79,14 @@ a {
   text-decoration: none;
 }
 
+.t-center {
+  text-align: center;
+}
+
+.wow:hover {
+
+}
+
 #search {
   display: flex;
   flex-flow: row nowrap;
@@ -116,25 +129,26 @@ a {
 }
 
 #cover {
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
 }
 
 #settings-panel {
   position: fixed;
-  left: 0;
-  top: 0;
+  right: 0;
+  top: 60px;
   width: auto;
   min-width: 600px;
   height: 100vh;
   background-color: #555;
   z-index: 11;
   box-shadow: 0 0 2px #5555;
+  backdrop-filter: blur(2px);
 }
 
 .settings-item {
@@ -161,6 +175,10 @@ a {
   margin: 0 8px;
 }
 
+.settings-panel-grp > h3 {
+  margin: 14px 0 0 0;
+}
+
 .settings-button {
   display: inline-block;
   width: 100px;
@@ -171,14 +189,18 @@ a {
   border-radius: 0;
 }
 
+.settings-button > h6 {
+ margin-top: 6px;
+}
+
 .border-left {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .border-right {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .settings-button > * {
@@ -186,11 +208,59 @@ a {
   font-family: 'Exo 2', sans-serif;
 }
 
+#main {
+  grid-area: main;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
 #cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+}
+
+#article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 8px;
+  max-width: 1000px;
+}
+
+#article > h1 {
+  text-align: left;
+  font-size: 2.5em;
+}
+
+#article > h2 {
+  text-align: left;
+  font-size: 2em;
+  margin-top: 32px;
+}
+
+#article > p {
+  text-align: justify;
+  font-size: 1.2em;
+  padding: 8px;
+}
+
+a#logo:hover {
+  border: none;
+  box-shadow: none;
+}
+
+.spacer {
+  display: block;
+  height: 100%;
+  width: 2px;
+
 }
 
 .vertical {
@@ -226,10 +296,42 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  border: solid white 4px;
+  box-shadow: 0 0 2px white;
+  cursor: pointer;
+}
+
+.c {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: calc(100% - 80px) 80px;
+  grid-template-areas: "image" "text";
+  width: 450px;
+  height: 253px;
+  border: solid darkgray 4px;
+  margin: 6px;
+  overflow: hidden;
+}
+
 .c-image {
-  height: calc(100% - 80px);
-  width: 100%;
+  max-height: calc(100% + 84px);
+  max-width: 100%;
+  width: auto;
+  height: auto;
   background-size: 100% 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  grid-area: image;
+  justify-self: center;
+}
+
+.c-text-box {
+  grid-area: text;
+  height: 80px;
+  width: 450px;
+  background-size: 100% 80px;
+  padding-top: 4px;
 }
 
 .c-text {
@@ -257,12 +359,6 @@ a {
   display: block;
 }
 
-.c-text-box {
-  height: 80px;
-  background-size: 100% 80px;
-  padding-top: 4px;
-}
-
 .group-left {
   float: left;
   width: 50%;
@@ -281,119 +377,6 @@ a {
   float: right;
 }
 
-.c-create {
-  background-image: url("../images/create-96.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-karolinefoto {
-  background-image: url("../images/karolinefoto.jpg");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-t9 {
-  background-image: url("../images/t9.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-game {
-  background-image: url("../images/webGL.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-firelauncher {
-  background-image: url("../images/Launcher.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-firemusic {
-  background-image: url("../images/FireMusic.png");
-  /*
-  background-size: 192px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-old {
-  background-image: url("../images/old.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-twitter {
-  background-image: url("../images/Twitter_Logo_Blue.svg");
-  background-size: 192px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-creative-learning {
-  background-image: url("../images/creative-learning.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-github {
-  background-image: url("../images/social/github-logo.svg");
-  background-size: 192px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-homepage {
-  background-image: url("../images/favicon.png");
-  /*
-  background-size: 192px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-inspire {
-  background-image: url("../images/inspire.png");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c-musicsheep {
-  background-image: url("../images/musicsheep.png");
-  /*
-  background-size: 192px auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.c {
-  width: 450px;
-  height: 250px;
-  border: solid darkgray 4px;
-  margin: 4px;
-  overflow: hidden;
-}
 
 .c-short {
   height: 90px;
@@ -415,15 +398,16 @@ a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 100%;
-  height: 80px;
+  padding: 0 4px;
+  width: calc(100% - 8px);
+  height: 60px;
   /*background-image: linear-gradient(to right, #a27 0%, #289 100%);*/
   box-shadow: 0px 0px 8px black;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 2;
-/*  filter: blur(2px);*/
+  backdrop-filter: blur(2px);
 }
 
 #header-1 {
@@ -431,24 +415,22 @@ a {
   flex-flow: row nowrap;
 }
 
-.game-surface-header {
-  height: 80px;
-  width: 100%;
-  display: block;
-  position: fixed;
-  z-index: -100;
-}
-
 .header-box {
-  height: 83px;
+  height: 63px;
 }
 
 .header-title {
   text-align: left;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  /* margin-top: 0px;
+  margin-bottom: 5px; */
+  margin: 5px 10px;
   font-size: 40px;
   font-family: 'Ubuntu Light';
+}
+
+div.japanese > .header-title {
+  font-size: 28px;
+  margin: 14px 10px;
 }
 
 .header-subtitle {
@@ -458,18 +440,17 @@ a {
 }
 
 .header-button {
-  height: 55px;
-  width: 55px;
-  margin-left: 12px;
-  margin-top: 12px;
-  margin-right: 12px;
+  height: 48px;
+  width: 48px;
+  margin: 6px;
   padding: 0;
 }
 
 .header-button > img {
-  height: 50px;
+  height: 26px;
   width: 36px;
-  margin: auto;
+  margin-top: 2px;
+  /* margin: auto; */
   padding: 0;
   border-radius: 0;
   filter: invert(1);
@@ -503,12 +484,30 @@ a {
 }
 
 .logo-text {
+  width: 300px;
   text-align: center;
   color: white;
   text-shadow: 0px 0px 1px white;
   font-size: 40px;
   margin-top: 0px;
   margin-bottom: 5px;
+}
+
+#logo {
+  width: 300px;
+  height: 100%;
+}
+
+#logo > div.japanese {
+  display: none;
+}
+
+#logo:hover > div.english {
+  display: none;
+}
+
+#logo:hover > div.japanese {
+  display: block;
 }
 
 .button-transparent {
@@ -549,8 +548,8 @@ input[type="color"] {
   width: 100px;
   padding: 0;
   border: solid lightgray 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   vertical-align: middle;
 }
 

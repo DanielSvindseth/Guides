@@ -15,14 +15,14 @@
   <body id="body" onload="loadTheme(); firstVisit(); applyColor(); loadAttributes(); cookieCheck();">
 
     <div id="header">
-      <div id="logo">
+      <a id="logo" href="index.html">
         <div class="logo-text english">
           <h1 class="header-title">svindseth.net</h1>
         </div>
         <div class="logo-text japanese">
           <h1 class="header-title">スヴィンセト・ネット</h1>
         </div>
-      </div>
+      </a>
       <button class="header-button" onclick="toggleSettingsPanel();"><img src="images/dock-right-symbolic.svg" alt="menu"></button>
     </div>
     <div class="header-box"></div>
@@ -31,21 +31,23 @@
 
     <div id="main">
       <div class="spacer"></div>
-      <div id="cards">
+      <div id="article">
 
-        <a class="c" href="linux_hp_envy_x360_ar0xxx.html">
-          <img class="c-image" src="images/envy_x360.png"></img>
-          <div class="c-text-box">
-            <h2 class="c-text">Linux on Envy x360 ar0xxx</h2>
-            <h3 class="c-text">A few issues and possible solutions</h3>
-          </div>
-        </a>
+        <h1>Linux on the HP Envy x360 ar0xxx</h1>
+        <p>I have recently bought this laptop, and while it has been an amazing machine, there were a few things I needed to do to make linux work peoperly on it. Below are a few of the issues, as well as possible solutions if available.</p>
+
+        <h2>GPU usage stuck at 100% and high idle battery drain</h2>
+        <p>Initially, I had problems with the GPU reporting 100% usage all the time. Additionally, the battery would drain during the night even when closed and suspended. My solution to the problem was to update the UEFI on the device. It came with version 17, which was pretty old, so I updated it through the Windows utility to version 30. This seemed to fix both problems!</p>
+
+        <h2>Fingerprint reader does not work</h2>
+        <p>Unfortunately, there is currently no working driver for the fingerprint reader on the device.</p>
+
+        <h2>Backlight times out after 30 seconds</h2>
+        <p>According to HP, this is intended behaviour. There is unfortunately no easy way to change this.</p>
 
       </div>
       <div class="spacer"></div>
     </div>
-
-
 
     <div id="cover" style="display: none;" onclick="toggleSettingsPanel();"></div>
     <div id="settings-panel" style="display: none;">
@@ -90,8 +92,5 @@
     </div>
   </body>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <!-- <script type="text/javascript" src="js/gl-matrix.js"></script>
-  <script type="text/javascript" src="js/game.js"></script> -->
-  <!-- <script type="text/javascript" src="js/index-strings.js"></script> -->
   <script type="text/javascript" src="js/color-chooser.js"></script>
 </html>

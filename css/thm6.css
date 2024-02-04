@@ -4,6 +4,10 @@ html
   color: white;
 }
 
+body {
+  background-color: #202020;
+}
+
 a
 {
   color: #E91E63;
@@ -35,7 +39,7 @@ a
 {
   background-color: white;
   box-shadow: 0px 0px 8px black;
-  border-radius: 3px;
+  border-radius: 6px;
   border-color;
   color: white;
 }
@@ -43,7 +47,7 @@ a
 #header
 {
   background-color: #0000 !important;
-  background-image: linear-gradient(to top, #0007 0%, #3337 20%, #ccc7 90%, #fff7 100%);
+  background-image: linear-gradient(to top, #2f2f6f7f 0%, #3f3f7f7f 10%, #7f7fbf7f 90%, #afafef7f 100%);
   box-shadow: 0px 0px 8px black;
 }
 
@@ -71,26 +75,26 @@ a
 
 #settings-panel {
   background-color: #0000 !important;
-  background-image: linear-gradient(to top, #0007 0%, #3337 20%, #ccc7 90%, #fff7 100%);
+  background-image: linear-gradient(to top, #2f2f6f7f 0%, #3f3f7f7f 10%, #7f7fbf7f 90%, #afafef7f 100%);
 }
 
 .settings-item {
-  background-image: linear-gradient(to bottom, #2229 0%, #9999 100%);
+  background-image: linear-gradient(to bottom, #2224 0%, #9994 100%);
 }
 
 button
 {
-  border-radius: 3px;
+  border-radius: 6px;
   border: solid 2px darkgray;
   background-color: #0000 !important;
-  background-image: linear-gradient(to top, #2229 0%, #7779 100%);
+  background-image: linear-gradient(to top, #2269 0%, #77b9 100%);
   color: white;
 }
 
 button:hover
 {
   background-color: #0000 !important;
-  background-image: radial-gradient(at bottom center, #fff7 0%, #0000 100%), linear-gradient(to top, #2229 0%, #7779 100%);
+  background-image: radial-gradient(at bottom center, #fff7 0%, #0000 100%), linear-gradient(to top, #2269 0%, #77b9 100%);
   border-color: white;
   color: white;
   box-shadow: 0 0 2px white;
@@ -99,7 +103,7 @@ button:hover
 button:active
 {
   background-color: #0000 !important;
-  background-image: linear-gradient(to bottom, #3339 0%, #6669 100%);
+  background-image: linear-gradient(to bottom, #3379 0%, #66a9 100%);
   border-color: grey;
-  color: #222;
+  color: white;
 }
