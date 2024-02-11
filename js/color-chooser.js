@@ -9,7 +9,7 @@ function pad(color) {
 
 function createRandomColor() {
   var r = Math.floor((Math.random() * 127) + 1);
-  var g = Math.floor((Math.random() * 127) + 1);
+  var g = Math.floor((Math.random() * 95) + 1);
   var b = Math.floor((Math.random() * 127) + 1);
   var a = '7f';
   var color = '#' + pad(r.toString(16)) + pad(g.toString(16)) + pad(b.toString(16)) + a;
